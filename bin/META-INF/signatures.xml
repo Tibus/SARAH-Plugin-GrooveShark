@@ -1,0 +1,38 @@
+<signatures>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="PackageSignature">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+      <SignatureMethod Algorithm="http://www.w3.org/TR/xmldsig-core#rsa-sha1"/>
+      <Reference URI="#PackageContents">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <DigestValue>FscsC7KUkR9K4z5L0y6qfVnBHmr80zLGsVACzQTQwDE=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue Id="PackageSignatureValue">kYiFR0f9lewlB84SGm7aCsIsqwozhJevdyeCnlrKcFgNY0X1KwgXIh4kBI8ncRCFG0WNKC4DZQtD
+Fk7JcWAz0gLG3QwokzhCUFPanUMpJGSKffxA1HUCbFvIEO1jTfeABb1Y9xaAFdt+xnJu6H7qWKL4
+XrIlSrPNNIXhW+Ex+mw=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIICDzCCAXegAwIBAgIaMTUxMDU2MTU6MTQzYmU4ODJiZGQ6LTgwMDAwDQYJKoZIhvcNAQEFBQAw
+NDELMAkGA1UEBhMCVVMxCTAHBgNVBAoTADEJMAcGA1UECxMAMQ8wDQYDVQQDEwZKdWxpZW4wHhcN
+MTQwMTIyMDk1NzExWhcNMzkwMTIzMDk1NzExWjA0MQswCQYDVQQGEwJVUzEJMAcGA1UEChMAMQkw
+BwYDVQQLEwAxDzANBgNVBAMTBkp1bGllbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEApv1j
+MhSRYEbmNDMbMtEfZFJiiZBNJK007NT9OacKO1TzGe2Qckrw3N7Vb0f9P8ZjyHVFxz1mnQ78vC5U
+dKWEtpsS2o8aCkCik3Pi8zfWXJGxbQEngpJrZmuZ1DxH8oLPjF+6azgOF0oinYxArC5FVyD8NzHj
+9w2h/Q7ZPQdB2DcCAwEAAaMXMBUwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDQYJKoZIhvcNAQEFBQAD
+ggCBAFPpV0hpgA1l0hPwL0yYclySa4YnvzWjfNk/Ge4VtFAHG5izNjsag8mht2uH8wdlPZga9oMw
+u0/8uOxx9FLUP9dL8iI9X+e7o8NwHMHPb3p4+Kfi17Xh+FdFWBiZfD5LX/wnOrOudkxOs2G+jBGY
+PI5d+2+J3GCzX7hJxMJIgseH</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+    <Object>
+      <Manifest Id="PackageContents">
+        <Reference URI="mimetype"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>0/oCb84THKMagtI0Dy0KogEu92TegdesqRr/clXct1c=</DigestValue></Reference><Reference URI="META-INF/AIR/application.xml"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>15l5KNCTBRAnDNeT7CQbcrS6uXoZ7z5U5JuhLulr7fc=</DigestValue></Reference><Reference URI="GroovesharkPlayerAIR.swf"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>hW8ZtJLBy/nbPen4DXS5SqTfdT/ORy7wvjPGKFOXevw=</DigestValue></Reference>
+      </Manifest>
+    </Object>
+    
+  </Signature>
+</signatures>

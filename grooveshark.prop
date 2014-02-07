@@ -1,0 +1,13 @@
+{
+  "modules" : { 
+    "grooveshark"  : {
+      "description": "Recherche et joue de la musique sur grooveshark",
+      "version"    : "0.4",
+	  "login"     : "-",
+	  "password"  : "-",
+	  "detailedSongs" : "true",
+	  "bigPicture" : "true",
+	  "doOnOpen" : "favorites"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<p>Le plugin Grooveshark permet à l'utilisateur d'écouter de la musique du site internet GrooveShark via un player spécialement fait pour S.A.R.A.H. GrooveShark est un site internet de streaming musical comme deezer ou spotify, l'avantage est qu'il est accessible partout, complètement gratuit, sans publicitées et dont le catalogue est très important et très actualisé. (Les nouveaux albums et hits à la radio sont généralement disponible très vite sur GrooveShark)
+</p>
+<p>
+Grâce à votre compte GrooveShark (complètement gratuit), vous pourrez écoutez vos playlist, vos chansons préférée, les playlist que vous suivez,... Si vous n'avez pas de compte, vous pourrez quand même écouter les chansons populaires de la journée/semaine/mois, faire des recherches par artiste/album/chanson,.. Le plugin et le player dédié à S.A.R.A.H. se charge de tout. Si vous définissez aussi le password de votre compte grooveShark dans les configurations du module, vous pourrez ajouter la chanson à l'écoute à vos chansons préférée/à l'une de vos playlist,...<p>
+<p>
+    <h3>Installation :</h3>
+    Avant de pouvoir utiliser le plugin :
+    <ul>
+        <li>vérifiez que le programme "GroovesharkPlayerAIR.exe" qui se trouve dans le dossier /bin s'ouvre correctement (vous devriez juste voir une fenêtre avec écrit "grooveShark". vous pouvez ensuite fermer la fenêtre.</li>
+    </ul>
+</p>
+
+<p>
+    <h3>Paramêtres :</h3>
+    Voici les différents paramêtres que vous pouvez changer dans la configuration du plugin :
+    <ul>
+        <li><strong>login</strong> : votre login (<strong>ATTENTION, votre nom d'utilisateur, pas votre email!</strong>) grooveshark (pas obligatoire mais permet d'accéder à vos chansons préférées, vos playlist, les playlist que vous suivez,...</li>
+		<li><strong>password</strong> : votre password grooveshark (pas obligatoire mais permet d'ajouter une chanson à l'écoute comme "favorite",...)(vous pouvez définir votre login sans obligatoirement définir de password, vous n'aurez juste pas accés au fonctionnalitées décrites)</li>
+		<li><strong>detailedSongs</strong> (oui/true/non/false): quand vous demandez à Sarah quelle est la chanson que vous écoutez, le plugin vous donne le titre de la chanson et l'artiste. Si "detailedSongs" est à "true" ou "oui", Sarah vous dira aussi le nom de l'album</li>
+		<li><strong>bigPicture</strong> (oui/true/non/false): en bêta, permet d'avoir un affichage plein-écran "a la XBMC" montrant la chanson actuelle, la prochaine,... (utile si le client dispose d'un écran,...). s'il est à "false" ou "non", le player prends la forme d'une toute petite application contenant uniquement le logo de grooveshark</li>
+		<li><strong>doOnOpen</strong> (last / popular / favorites): vous permet de définir ce que fait le plugin quand vous lui dites simplement de lancer de la musique. "last" vous fera écouter la dernière action que vous avez fait, "popular" vous fera écouter les chansons populaire de la journée, "favorites" vous fera écouter vos chansons préférée (uniquement si "login" est défini)</li>
+    </ul>
+</p>
+
+<p>
+    <h3>Utilisation :</h3>
+    Il y a tout un tas de phrase possible pour ouvrir le player, faire des recherches,... le plus simple est de lire le fichier XML pour voir toutes les phrases possibles. Voici cependant une liste de toute les fonctionnalités disponible et une phrase correspondante
+    <ul>
+        <li><strong>Sarah mets de la musique</strong> : lance le player grooveShark et fait ce qu'il est défini dans "doOnOpen"</li>
+		<li><strong>Sarah ferme groovshark</strong> : ferme le player grooveShark</li>
+		<li><strong>Sarah coupe la musique</strong> : mets en pause la musique</li>
+		<li><strong>Sarah remets la musique</strong> : remets la musique après une pause</li>
+		<li><strong>Sarah chanson suivante</strong> : mets la chanson suivante</li>
+		<li><strong>Sarah chanson précédante</strong> : mets la chanson précédante</li>
+		<li><strong>Sarah lance mes chansons préférées</strong> : mets vos chansons préférées</li>
+		<li><strong>Sarah j'aime cette chanson</strong> : mets la chanson en écoute dans vos chansons préférées</li>
+		<li><strong>Sarah c'est quoi la musique</strong> : vous donne le titre de la chanson et l'artiste (et éventuellement l'album en fonction de "detailedSongs"</li>
+		<li><strong>Sarah quesque tu fais sur grouvshark</strong> : vous décris ce qui est actuellement en écoute ("votre playliste Noël"/"les meilleurs chansons de Stromae"/"les chansons populaires d'aujourd'hui",...)</li>
+		<li><strong>Sarah lance les chansons populaires d'aujourd'hui</strong> : vous fera écouter les chansons populaires du jours sur grooveshark (un peu comme une radio des hits)</li>
+		<li><strong>Sarah met la playlist XXX</strong> : lance une de vos playlist ou celles que vous suivez</li>
+		<li><strong>Sarah met à jour les playlists</strong> : mets à jour la liste de vos playlist et des playlists que vous suivez, dans le xml de language</li>
+		<li><strong>Sarah met l'album Cheese</strong> : recherche le nom de l'album via la reconnaissance de Google et lance les chansons dans l'ordres de l'album. (suivi d'autre chansons qui correspondent)</li>
+		<li><strong>Sarah met l'album Cheese de Stromae</strong> : recherche le nom de l'album et de l'artiste via la reconnaissance de Google et lance les chansons dans l'ordres de l'album. (suivi d'autre chansons qui correspondent)</li>
+		<li><strong>Sarah met l'artiste Stromae</strong> : recherche le nom de l'artiste via la reconnaissance de Google et lance les chansons dans l'ordres des chansons les plus populaires.</li>
+    </ul>
+</p>
+<p>
+	Si vous avez la moindre question, n'hésitez pas à la pause sur la page google plus de S.A.R.A.H.
+</p>
+<p>Plugin et player réalisé par Julien Delnatte uniquement pour une utilisation avec S.A.R.A.H.</p>

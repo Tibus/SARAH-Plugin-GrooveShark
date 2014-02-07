@@ -1,0 +1,182 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleGrooveshark" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+	<rule id="ruleGrooveshark" scope="public">
+		<example>Sarah chante moi du Charles Aznavour</example>
+		<item>Sarah</item>
+		<one-of>
+			<item><ruleref uri="#ruleGrooveshark_command"/></item>
+			<item><ruleref uri="#ruleGrooveshark_playlist"/></item>
+			<item><ruleref uri="#ruleGrooveshark_search_album"/></item>
+			<item><ruleref uri="#ruleGrooveshark_search_artist"/></item>
+		</one-of>
+	</rule>
+	<rule id="ruleGrooveshark_command" scope="public">
+		<example>Sarah surprends moi</example>
+		<tag>out.action=new Object(); </tag>
+		<one-of>
+			<!-- OPEN -->
+			<item>met de la musique<tag>out.action.command="open"</tag></item>
+			<item>lance grooveshark<tag>out.action.command="open"</tag></item>
+			<item>surprends moi<tag>out.action.command="open"</tag></item>
+			<item>met la musique<tag>out.action.command="open"</tag></item>
+			<item>met moi de la musique<tag>out.action.command="open"</tag></item>
+			<item>lance la musique<tag>out.action.command="open"</tag></item>
+			<item>lance moi de la musique<tag>out.action.command="open"</tag></item>
+		
+			<!-- POPULAR -->
+			<item>lance les chansons populaires d'aujourd'hui<tag>out.action.command="popular"</tag></item>
+			<item>lance les chansons populaires<tag>out.action.command="popular"</tag></item>
+			<item>met les chansons populaires<tag>out.action.command="popular"</tag></item>
+			<item>met les chansons populaires d'aujourd'hui<tag>out.action.command="popular"</tag></item>
+			<item>lance les chansons populaires de la journée<tag>out.action.command="popular"</tag></item>
+			<item>met les chansons populaires  de la journée<tag>out.action.command="popular"</tag></item>
+
+			<!-- FAVORITES -->
+			<item>lance mes chansons préférées<tag>out.action.command="favorites"</tag></item>
+			<item>met mes chansons préférées<tag>out.action.command="favorites"</tag></item>
+			<item>met mes chansons favorites<tag>out.action.command="favorites"</tag></item>
+			<item>lance mes chansons favorites<tag>out.action.command="favorites"</tag></item>
+			
+			<!-- LIKE -->
+			<item>j'aime cette chanson<tag>out.action.command="like"</tag></item>
+			<item>j'adore cette chanson<tag>out.action.command="like"</tag></item>
+			<item>met dans mes favorites<tag>out.action.command="like"</tag></item>
+			<item>met dans mes chansons favorites<tag>out.action.command="like"</tag></item>
+			<item>met dans mes préférées<tag>out.action.command="like"</tag></item>
+			<item>met dans mes chansons préférées<tag>out.action.command="like"</tag></item>
+
+						
+			<!-- CLOSE -->
+			<item>ferme grouvshark<tag>out.action.command="close"</tag></item>
+			<item>arrête grouvshark<tag>out.action.command="close"</tag></item>
+			
+			<!-- PAUSE -->
+			<item>met en pause<tag>out.action.command="pause"</tag></item>
+			<item>coupe la musique<tag>out.action.command="pause"</tag></item>
+			<item>arréte la musique<tag>out.action.command="pause"</tag></item>
+			<item>stop la musique<tag>out.action.command="pause"</tag></item>
+			<item>pause<tag>out.action.command="pause"</tag></item>
+			<item>met en pause la musique<tag>out.action.command="pause"</tag></item>
+			
+			<!-- RESUME -->
+			<item>relance la musique<tag>out.action.command="resume"</tag></item>
+			<item>remet la musique<tag>out.action.command="resume"</tag></item>
+			<item>réziüme<tag>out.action.command="resume"</tag></item>
+			<item>résume<tag>out.action.command="resume"</tag></item>
+			
+			<!-- NEXT -->
+			<item>chanson suivante<tag>out.action.command="next"</tag></item>
+			<item>met la chanson d'après<tag>out.action.command="next"</tag></item>
+			<item>met la chanson suivante<tag>out.action.command="next"</tag></item>
+			<item>met la suivante<tag>out.action.command="next"</tag></item>
+			
+			<!-- PREV -->
+			<item>chanson précédante<tag>out.action.command="prev"</tag></item>
+			<item>chanson praicaidante<tag>out.action.command="prev"</tag></item>
+			<item>met la chanson d'avant<tag>out.action.command="prev"</tag></item>
+			<item>met la chanson praicaidante<tag>out.action.command="prev"</tag></item>
+			<item>met la praicaidante<tag>out.action.command="prev"</tag></item>
+			
+			<!-- CURRENTLY -->
+			<item>c'est quelle chanson<tag>out.action.command="currentSong"</tag></item>
+			<item>c'est quoi la musique<tag>out.action.command="currentSong"</tag></item>
+			<item>quesque tu fais sur grouvshark<tag>out.action.command="currently"</tag></item>
+
+			<!-- UPDATE PLAYLIST -->
+			<item>met à jour les playlist<tag>out.action.command="updatePlaylist"</tag></item>
+			<item>met à jour les playlist<tag>out.action.command="updatePlaylist"</tag></item>
+			<item>charge les playlist<tag>out.action.command="updatePlaylist"</tag></item>
+			<item>actualise les playlist<tag>out.action.command="updatePlaylist"</tag></item>
+		</one-of>
+		<item repeat="0-1">
+			<one-of>
+				<item>sur grouvshark</item>
+				<item>grouvshark</item>
+			</one-of>
+		</item>
+		<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/grooveshark";</tag>
+	</rule>
+	<rule id="ruleGrooveshark_playlist" scope="public">
+		<example>Sarah lance la playlist</example>
+		<tag>out.action=new Object(); </tag>
+		<tag>out.action.command="playlist"</tag>
+		<one-of>
+			<!-- PLAYLIST -->
+			<item>lance la playlist</item>
+			<item>met la playlist</item>
+		</one-of>
+		<one-of>
+			<!--playlists{-->
+			<item>test<tag>out.action.id="94550920";</tag></item>
+			<item>stromae<tag>out.action.id="94594058";</tag></item>
+			<item>Christmas<tag>out.action.id="158546";</tag></item>
+			<item>The Most Relaxing Classical Music in the Universe<tag>out.action.id="354267";</tag></item>
+			<item>Rock<tag>out.action.id="18235562";</tag></item>
+			<item>Most Beautiful<tag>out.action.id="18925773";</tag></item>
+			<item>70's 80's 90's till now - Legends of Music *Glitched I can no longer edit this and doesnt even show up as my playlist*<tag>out.action.id="22273378";</tag></item>
+			<item>Classical 2<tag>out.action.id="25778277";</tag></item>
+			<item>Reddit's 90's Alternative<tag>out.action.id="26127464";</tag></item>
+			<item>Listen To This<tag>out.action.id="30513334";</tag></item>
+			<item>Dubstep<tag>out.action.id="33270515";</tag></item>
+			<item>Epic<tag>out.action.id="33493067";</tag></item>
+			<item>Focus/Study/Reading<tag>out.action.id="35859745";</tag></item>
+			<item>The Reddit Rap/House/Dancehall Ultimate Party Playlist!<tag>out.action.id="37517774";</tag></item>
+			<item>Reddit Badass Songs<tag>out.action.id="38361918";</tag></item>
+			<item>Me Gusta Songs from Reddit<tag>out.action.id="39041461";</tag></item>
+			<item>~ Steal This Playlist ~<tag>out.action.id="39673725";</tag></item>
+			<item>Reddit's 500<tag>out.action.id="39900759";</tag></item>
+			<item>Reddits Top Albums of 2010<tag>out.action.id="41296027";</tag></item>
+			<item>Reddit's Top 1,000<tag>out.action.id="41614890";</tag></item>
+			<item>Reddit Cogsci Playlist<tag>out.action.id="42406643";</tag></item>
+			<item>Daft Punk + Prodigy<tag>out.action.id="43064035";</tag></item>
+			<item>Radiohead<tag>out.action.id="43353886";</tag></item>
+			<!--}playlists-->
+		</one-of>
+		<item repeat="0-1">
+			<one-of>
+				<item>sur grouvshark</item>
+				<item>grouvshark</item>
+			</one-of>
+		</item>
+		<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/grooveshark";</tag>
+	</rule>
+	<rule id="ruleGrooveshark_search_album" scope="public">
+		<example>Sarah met l'album Cheese de Stromae</example>
+		<tag>out.action=new Object(); </tag>
+		<one-of>
+			<item>met l'album<tag>out.action.command="album"</tag></item>
+			<item>lance l'album<tag>out.action.command="album"</tag></item>
+		</one-of>
+		<ruleref special="GARBAGE"/>
+		<item repeat="0-1">
+			<one-of>
+				<item>de l'artiste</item>
+			</one-of>
+			<ruleref special="GARBAGE"/>
+		</item>
+		<item repeat="0-1">
+			<one-of>
+				<item>sur grouvshark</item>
+				<item>grouvshark</item>
+			</one-of>
+		</item>
+		<tag>out.action._attributes.dictation="true";out.action._attributes.uri="http://127.0.0.1:8080/sarah/grooveshark";</tag>
+	</rule>
+	<rule id="ruleGrooveshark_search_artist" scope="public">
+		<example>Sarah met l'artiste Stromae</example>
+		<tag>out.action=new Object(); </tag>
+		<one-of>
+			<item>met l'artiste<tag>out.action.command="artist"</tag></item>
+			<item>met les meilleurs chansons de<tag>out.action.command="artist"</tag></item>
+			<item>lance l'artiste<tag>out.action.command="artist"</tag></item>
+			<item>lance les meilleurs chansons de<tag>out.action.command="artist"</tag></item>
+		</one-of>
+		<ruleref special="GARBAGE"/>
+		<item repeat="0-1">
+			<one-of>
+				<item>sur grouvshark</item>
+				<item>grouvshark</item>
+			</one-of>
+		</item>
+		<tag>out.action._attributes.dictation="true";out.action._attributes.uri="http://127.0.0.1:8080/sarah/grooveshark";</tag>
+	</rule>
+</grammar>
