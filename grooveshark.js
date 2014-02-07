@@ -12,18 +12,22 @@ exports.action = function(data, callback, config, SARAH)
 	switch(data.command)
 	{
 		case "pause":
+			tts="";
 			params = "pause";
 			break;
 		case "resume":
+			tts="";
 			params = "resume";
 			break;
 		case "next":
+			tts="";
 			params = "next";
 			break;
 		case "close":
 			params = "close";
 			break;
 		case "prev":
+			tts="";
 			params = "prev";
 			break
 		case "updatePlaylist":
@@ -71,6 +75,7 @@ exports.action = function(data, callback, config, SARAH)
 			}
 			break;
 		case "like":
+			tts="";
 			params = "like";
 			break;
 		case "favorites":
@@ -80,6 +85,7 @@ exports.action = function(data, callback, config, SARAH)
 			params = "playlist "+data.id;
 			break;
 		case "currentSong":
+			tts="";
 			if(config.detailedSongs == "true" || config.detailedSongs == "oui")
 				params = "currentSongAlbum";
 			else
@@ -89,6 +95,7 @@ exports.action = function(data, callback, config, SARAH)
 			params = "popular";
 			break;
 		case "currently":
+			tts="";
 			params = "currently";
 			break;
 		default : 
