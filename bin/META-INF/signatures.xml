@@ -8,12 +8,12 @@
           <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
         </Transforms>
         <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-        <DigestValue>FscsC7KUkR9K4z5L0y6qfVnBHmr80zLGsVACzQTQwDE=</DigestValue>
+        <DigestValue>UnZzi7WT6q/+XHLobZQYF60mLOU6lVRH9haNhuL2kuk=</DigestValue>
       </Reference>
     </SignedInfo>
-    <SignatureValue Id="PackageSignatureValue">kYiFR0f9lewlB84SGm7aCsIsqwozhJevdyeCnlrKcFgNY0X1KwgXIh4kBI8ncRCFG0WNKC4DZQtD
-Fk7JcWAz0gLG3QwokzhCUFPanUMpJGSKffxA1HUCbFvIEO1jTfeABb1Y9xaAFdt+xnJu6H7qWKL4
-XrIlSrPNNIXhW+Ex+mw=</SignatureValue>
+    <SignatureValue Id="PackageSignatureValue">lVlROJUthJjstohMq4ydlQu/jVy/tl0bw5nRH4P+yU0vbXQ2laO2tf1rp1GygOKKA/sv0YVWWCJD
+6yRSSos4feRZf78Ap+LAz5wmFWGaTGFG34Bs4ss71z+Tiai+F2KI7rC77fkiImm4307Exjaz9tIl
+NOmTDox1kM9W1BMFOHo=</SignatureValue>
     <KeyInfo>
       <X509Data>
         <X509Certificate>MIICDzCCAXegAwIBAgIaMTUxMDU2MTU6MTQzYmU4ODJiZGQ6LTgwMDAwDQYJKoZIhvcNAQEFBQAw
@@ -30,7 +30,7 @@ PI5d+2+J3GCzX7hJxMJIgseH</X509Certificate>
     </KeyInfo>
     <Object>
       <Manifest Id="PackageContents">
-        <Reference URI="mimetype"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>0/oCb84THKMagtI0Dy0KogEu92TegdesqRr/clXct1c=</DigestValue></Reference><Reference URI="META-INF/AIR/application.xml"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>15l5KNCTBRAnDNeT7CQbcrS6uXoZ7z5U5JuhLulr7fc=</DigestValue></Reference><Reference URI="GroovesharkPlayerAIR.swf"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>hW8ZtJLBy/nbPen4DXS5SqTfdT/ORy7wvjPGKFOXevw=</DigestValue></Reference>
+        <Reference URI="mimetype"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>0/oCb84THKMagtI0Dy0KogEu92TegdesqRr/clXct1c=</DigestValue></Reference><Reference URI="META-INF/AIR/application.xml"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>15l5KNCTBRAnDNeT7CQbcrS6uXoZ7z5U5JuhLulr7fc=</DigestValue></Reference><Reference URI="GroovesharkPlayerAIR.swf"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>Lr3YqKLhbZ7EJThm+Szun/7qJZI9SCjX68vRLNKMrcg=</DigestValue></Reference>
       </Manifest>
     </Object>
     
