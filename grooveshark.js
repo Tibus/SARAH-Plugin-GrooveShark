@@ -1,16 +1,35 @@
+var API_URL = __dirname + "/bin/GroovesharkPlayerAIR.exe ";
+var exec = require('child_process').exec;
+/*
+exports.speak = function(tts, async, SARAH)
+{ 
+	var child = exec(API_URL+"sarahSay "+tts, function (error, stdout, stderr){});
+	console.log("say somethings : "+tts);
+	return tts;
+}
+*/
 exports.action = function(data, callback, config, SARAH)
 {
 	var path = require("path").resolve(".");
 	config = config.modules.grooveshark;
 	
-	var API_URL = __dirname + "/bin/GroovesharkPlayerAIR.exe ";
-	var exec = require('child_process').exec;
-	exec(API_URL+" config "+config.login+" "+config.password+" "+config.bigPicture);
-	
 	var params = "";
 	var tts = "Je m'en occupe";
 	switch(data.command)
 	{
+		case "info" :
+			var info = require('fs').readFileSync(__dirname + "/bin/infos.json", 'utf8');;// last / popular / favorites
+			callback({"tts":String(info)});
+			return;
+			break;
+		case "playPause" :
+			params = "playPause "+config.doOnOpen;// last / popular / favorites
+			break;
+		case "setVolume":
+			tts="";
+			console.log("coucou");
+			params = "setVolume "+data.value;
+			break;
 		case "pause":
 			tts="";
 			params = "pause";
@@ -106,6 +125,8 @@ exports.action = function(data, callback, config, SARAH)
 
 	callback({"tts":tts});
 	
+	exec(API_URL+" config "+config.login+" "+config.password+" "+config.bigPicture);
+
 	var child = exec(API_URL+params,
 		function (error, stdout, stderr) {
 			if (error !== null) {
