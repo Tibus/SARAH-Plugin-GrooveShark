@@ -1,13 +1,10 @@
 var API_URL = __dirname + "/bin/GroovesharkPlayerAIR.exe ";
 var exec = require('child_process').exec;
-var grooveSharkProcess;
-
 /*
 exports.speak = function(tts, async, SARAH)
 { 
-	if(grooveSharkProcess)
-		grooveSharkProcess = exec(API_URL+"sarahSay "+tts, function (error, stdout, stderr){});
-	//console.log("say somethings : "+tts);
+	var child = exec(API_URL+"sarahSay "+tts, function (error, stdout, stderr){});
+	console.log("say somethings : "+tts);
 	return tts;
 }
 */
@@ -128,10 +125,9 @@ exports.action = function(data, callback, config, SARAH)
 
 	callback({"tts":tts});
 	
-	if(grooveSharkProcess == null)
-		exec(API_URL+" config "+config.login+" "+config.password+" "+config.bigPicture);
+	exec(API_URL+" config "+config.login+" "+config.password+" "+config.bigPicture);
 
-	grooveSharkProcess = exec(API_URL+params,
+	var child = exec(API_URL+params,
 		function (error, stdout, stderr) {
 			if (error !== null) {
 				console.log('exec error: ' + error);
