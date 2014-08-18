@@ -44,7 +44,11 @@
 			<item>met dans mes préférées<tag>out.action.command="like"</tag></item>
 			<item>met dans mes chansons préférées<tag>out.action.command="like"</tag></item>
 
-						
+			<!-- UNLIKE -->
+			<item>je n'aime pas cette chanson<tag>out.action.command="unlike"</tag></item>
+			<item>je déteste cette chanson<tag>out.action.command="unlike"</tag></item>
+			<item>enleve de mes favorites<tag>out.action.command="unlike"</tag></item>
+				
 			<!-- CLOSE -->
 			<item>ferme grouvshark<tag>out.action.command="close"</tag></item>
 			<item>arrête grouvshark<tag>out.action.command="close"</tag></item>
@@ -86,6 +90,13 @@
 			<item>met à jour les playlist<tag>out.action.command="updatePlaylist"</tag></item>
 			<item>charge les playlist<tag>out.action.command="updatePlaylist"</tag></item>
 			<item>actualise les playlist<tag>out.action.command="updatePlaylist"</tag></item>
+			
+			<!-- SHUFFLE -->
+			<item>met la musique en mode aléatoire<tag>out.action.command="shuffleTrue"</tag></item>
+			<item>met grooveshark en mode aléatoire<tag>out.action.command="shuffleTrue"</tag></item>
+			<item>met la musique en mode normal<tag>out.action.command="shuffleFalse"</tag></item>
+			<item>met grooveshark en mode normal<tag>out.action.command="shuffleFalse"</tag></item>
+		
 		</one-of>
 		<item repeat="0-1">
 			<one-of>
@@ -106,29 +117,7 @@
 		</one-of>
 		<one-of>
 			<!--playlists{-->
-			<item>test<tag>out.action.id="94550920";</tag></item>
 			<item>stromae<tag>out.action.id="94594058";</tag></item>
-			<item>Christmas<tag>out.action.id="158546";</tag></item>
-			<item>The Most Relaxing Classical Music in the Universe<tag>out.action.id="354267";</tag></item>
-			<item>Rock<tag>out.action.id="18235562";</tag></item>
-			<item>Most Beautiful<tag>out.action.id="18925773";</tag></item>
-			<item>70's 80's 90's till now - Legends of Music *Glitched I can no longer edit this and doesnt even show up as my playlist*<tag>out.action.id="22273378";</tag></item>
-			<item>Classical 2<tag>out.action.id="25778277";</tag></item>
-			<item>Reddit's 90's Alternative<tag>out.action.id="26127464";</tag></item>
-			<item>Listen To This<tag>out.action.id="30513334";</tag></item>
-			<item>Dubstep<tag>out.action.id="33270515";</tag></item>
-			<item>Epic<tag>out.action.id="33493067";</tag></item>
-			<item>Focus/Study/Reading<tag>out.action.id="35859745";</tag></item>
-			<item>The Reddit Rap/House/Dancehall Ultimate Party Playlist!<tag>out.action.id="37517774";</tag></item>
-			<item>Reddit Badass Songs<tag>out.action.id="38361918";</tag></item>
-			<item>Me Gusta Songs from Reddit<tag>out.action.id="39041461";</tag></item>
-			<item>~ Steal This Playlist ~<tag>out.action.id="39673725";</tag></item>
-			<item>Reddit's 500<tag>out.action.id="39900759";</tag></item>
-			<item>Reddits Top Albums of 2010<tag>out.action.id="41296027";</tag></item>
-			<item>Reddit's Top 1,000<tag>out.action.id="41614890";</tag></item>
-			<item>Reddit Cogsci Playlist<tag>out.action.id="42406643";</tag></item>
-			<item>Daft Punk + Prodigy<tag>out.action.id="43064035";</tag></item>
-			<item>Radiohead<tag>out.action.id="43353886";</tag></item>
 			<!--}playlists-->
 		</one-of>
 		<item repeat="0-1">

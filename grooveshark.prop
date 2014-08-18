@@ -2,7 +2,7 @@
   "modules" : { 
     "grooveshark"  : {
       "description": "Recherche et joue de la musique sur grooveshark",
-      "version"    : "1.5",
+      "version"    : "1.6",
 	  "login"     : "-",
 	  "password"  : "-",
 	  "detailedSongs" : "true",
